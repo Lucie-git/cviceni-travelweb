@@ -17,7 +17,6 @@ nav {
   margin: 0;
   padding: 5px;
   text-align: center;
-  position: fixed;
 }
 
 nav img {
@@ -28,6 +27,7 @@ nav img {
 .intro {
   padding: 10px;
   font-family: sans-serif;
+  margin-top: 70px;
 }
 
 figure {
@@ -37,7 +37,6 @@ figure {
   box-shadow: 0 0 10px 0px #172d0394;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
-  display: flex;
 }
 
 img {
@@ -56,8 +55,7 @@ img {
   background-color: #5c7f3b;
   border: 2px solid #4b7d1c;
   box-shadow: 0 0 10px 0px #172d0394;
-  position: sticky;
-  top: 50px;
+
 }
 
 .chat {
@@ -75,6 +73,8 @@ img {
 /* ---Your code starts here--- */
 
 nav {
+  position: fixed;
+  z-index: 1;
   /* všimni si, že při scrollování obsahem stránky navigace zůstává na vrchu viewportu  */
 }
 
@@ -85,11 +85,14 @@ main {
 }
 
 .travel {
+  position: sticky;
+  top: 50px;
   /* tento div při scrollování neodjede s obsahem, ale přilepí 10px pod navigací (50px od vrchu obsahu) */
 }
 
 .picture {
-  justify-content: end;
+display: flex;
+flex-direction: row-reverse;
 
   /* je potřeba zajistit, abychom mohli přesunout popisek obrázku do pravého horního rohu obrázku */
 }

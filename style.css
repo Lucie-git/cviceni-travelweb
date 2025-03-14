@@ -37,6 +37,7 @@ figure {
   box-shadow: 0 0 10px 0px #172d0394;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
+  display: flex;
 }
 
 img {
@@ -78,6 +79,8 @@ nav {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   /* zajisti, aby navigace nepřekrývala obsah. Navigace je vysoká 40px*/
 }
 
@@ -86,15 +89,20 @@ main {
 }
 
 .picture {
+  justify-content: end;
+
   /* je potřeba zajistit, abychom mohli přesunout popisek obrázku do pravého horního rohu obrázku */
 }
 
 .picture-description {
+  position: absolute;
   /* popisek obrázku se nachází přímo na obrázku, 10px shora a 10px zprava */
 }
 
 .mountains,
 .sea {
+  position: relative;
+  left: 450px
   /* obrázky hor a moře jsou zleva odsunuty o 450px */
 }
 
